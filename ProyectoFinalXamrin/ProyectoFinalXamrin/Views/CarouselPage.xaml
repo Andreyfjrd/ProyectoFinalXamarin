@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinalXamrin.Views.CarouselPage" Title="Lugares"
+              xmlns:local="clr-namespace:ProyectoFinalXamrin"
+             xmlns:control="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <StackLayout x:Name="stackPrinc" Orientation="Vertical">
+        <Label Text="Prueba 1"/>
+        <control:CarouselView x:Name="Carousel" VerticalOptions="Start" HeightRequest="200">
+            <control:CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout  Orientation="Vertical">
+                        <Image Aspect="AspectFit" Source="{Binding Img}"/>
+                        <Label Text="{Binding Nombre}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </control:CarouselView.ItemTemplate>
+        </control:CarouselView>
+
+        <Label Text="Prueba 2"/>
+
+    </StackLayout>
+
+</ContentPage>
